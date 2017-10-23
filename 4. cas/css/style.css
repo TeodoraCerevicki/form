@@ -121,7 +121,7 @@ table {
   -webkit-box-shadow: 10px 10px 5px rgba(173, 173, 173, 0.5);
   box-shadow: 10px 10px 5px rgba(173, 173, 173, 0.5);
   margin: 50px auto;
-  padding: 20px 40px;
+  padding: 50px 40px;
   width: 60%; }
 
 input[type="radio"] {
@@ -178,45 +178,46 @@ input:checked + label[for="xl"]::before {
   position: absolute;
   left: 0; }
 
+.quantity {
+  margin: 100px 0; }
+  .quantity input[type="number"] {
+    border: 1px solid #0c2449;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0 55px 10px 0;
+    padding: 5px 5px 5px 15px; }
+
 fieldset {
   padding: 20px;
   margin: 20px 0;
-  border: 3px solid #eee; }
-
-legend {
-  font-size: 20px;
-  color: #0c2449;
-  letter-spacing: 0.1em;
-  padding: 10px; }
-
-input[type="text"],
-input[type="email"],
-input[type="number"],
-input[type="telephone"] {
-  border: 1px solid #0c2449;
-  border-radius: 4px;
-  display: inline-block;
-  margin: 0 55px 10px 0;
-  padding: 5px;
+  border: 3px solid #eee;
   position: relative; }
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="telephone"]:focus {
-  background: #f2edda; }
-
-input[type="text"]:valid,
-input[type="email"]:valid,
-input[type="number"]:valid,
-input[type="telephone"]:valid {
-  border: 2px solid #29af00; }
-
-input[type="text"]:invalid,
-input[type="email"]:invalid,
-input[type="number"]:invalid,
-input[type="telephone"]:invalid {
-  border: 2px solid #e83a40; }
+  fieldset legend {
+    font-size: 20px;
+    color: #0c2449;
+    letter-spacing: 0.1em;
+    padding: 10px; }
+  fieldset input[type="text"],
+  fieldset input[type="email"],
+  fieldset input[type="number"],
+  fieldset input[type="telephone"] {
+    border: 1px solid #0c2449;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0 55px 10px 0;
+    padding: 5px; }
+  fieldset input[type="text"]:focus,
+  fieldset input[type="email"]:focus,
+  fieldset input[type="number"]:focus,
+  fieldset input[type="telephone"]:focus {
+    background: #f2edda; }
+  fieldset input[type="text"]:valid,
+  fieldset input[type="email"]:valid,
+  fieldset input[type="number"]:valid,
+  fieldset input[type="telephone"]:valid {
+    background: url(../img/check.png) no-repeat right;
+    background-size: 30px;
+    border: 2px solid #29af00; }
 
 .form-buttons {
   display: -webkit-box;

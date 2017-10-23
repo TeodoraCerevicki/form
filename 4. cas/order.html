@@ -23,7 +23,7 @@
         <nav>
             <div class="logo">
                 
-                <a href="#"><i class="fa fa-paw" aria-hidden="true"></i> paw</a>
+                <a href="index.html"><i class="fa fa-paw" aria-hidden="true"></i> paw</a>
             </div>
             <ul>
                 <li><a href="#" target="_blank">brand</a> </li>
@@ -42,51 +42,64 @@
         
         <form action="" class="order-form">
             
-            <!-- Gender -->
+            <div class="flex">
+                <div>
+                    
+                    
+                    <!-- Gender -->
+                    <p>You want to order for:</p>
+                    <input type="radio" id="male" name="gender" />
+                    <label for="male">Male</label><br/>
+                    
+                    <input type="radio" id="female" name="gender" />
+                    <label for="female">Female</label>
+                    
+                </div>
+                
+                <div>
+                    
+                    <!-- Size -->
+                    <p>... And you want size:</p>
+                    
+                    <input type="radio" id="xs" name="size" />
+                    <label for="xs">xs</label><br/>
+                    
+                    <input type="radio" id="s" name="size" />
+                    <label for="s">s</label><br/>
+                    
+                    <input type="radio" id="m" name="size" checked />
+                    <label for="m">m</label><br/>
+                    
+                    <input type="radio" id="l" name="size" />
+                    <label for="l">l</label><br/>
+                    
+                    <input type="radio" id="xl" name="size" />
+                    <label for="xl">xl</label>
+                </div>
+            </div>
             
-            <p>You want to order for:</p>
-            <input type="radio" id="male" name="gender" />
-            <label for="male">Male</label><br/>
-            <input type="radio" id="female" name="gender" />
-            <label for="female">Female</label>
             
             
-            <!-- Size -->
-            
-            <p>... And you want size:</p>
-            <input type="radio" id="xs" name="size" />
-            <label for="xs">xs</label><br/>
-            
-            <input type="radio" id="s" name="size" />
-            <label for="s">s</label><br/>
-            
-            <input type="radio" id="m" name="size" checked />
-            <label for="m">m</label><br/>
-            
-            <input type="radio" id="l" name="size" />
-            <label for="l">l</label><br/>
-            
-            <input type="radio" id="xl" name="size" />
-            <label for="xl">xl</label>
             
             
             <!-- Quantity -->
             
-            <p>Oh... and how many of them you want?</p>
-            
-            <input type="number" name="quantity" value="1" >
+            <div class="quantity">
+                <p>Oh... and how many of them you want?</p>
+                <input type="number" name="quantity" value="1" >
+            </div>
             
             <!-- Contact -->
             
             <fieldset>
                 <legend>Contact Info</legend>
                 
-                <input type="text" name="first-name" placeholder="First name" required>
+                <input type="text" name="first-name"  placeholder="First name" required>
                 
                 <input type="text" name="last-name" placeholder="Last name" required> <br/>
                 
-                <input type="email" placeholder="Email" required />
-                <span class="tick"></span>
+                <input type="email" placeholder="Email" class="tick"  required />
+                
                 <input type="telephone" placeholder="Phone number" required /> <br/>
                 
                 <input type="text" name="address" placeholder="Address" required>
@@ -97,7 +110,6 @@
                 
                 <input type="text" name="country" placeholder="Country" required>
                 
-                <span class="tick"></span>
             </fieldset>
             
             
