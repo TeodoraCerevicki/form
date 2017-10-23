@@ -171,11 +171,11 @@ table {
 
 .order-form {
     background: $white;
-    border-left: 8px solid #0097c1;
+    border-left: 12px solid #0097c1;
     border-radius: 0 10px 10px 0;
     box-shadow: 10px 10px 5px rgba(173, 173, 173, 0.5);
     margin: 50px auto;
-    padding: 20px;
+    padding: 20px 40px;
     width: 60%;
 }
 
@@ -250,6 +250,10 @@ input:checked + label[for="xl"]::before {
 }
 
 
+
+
+
+// FIELDSET
 fieldset {
     padding: 20px;
     margin: 20px 0;
@@ -284,30 +288,17 @@ input[type="email"]:focus,
 input[type="number"]:focus,
 input[type="telephone"]:focus {
     
-    background: #eee;
+    background: #f2edda;
 }
 
-input[type="text"]::before,
-input[type="email"]::before,
-input[type="number"]::before,
-input[type="telephone"]::before {
-    
-    content: "\f1b0";
-    color: $blue;
-    font-family: FontAwesome;
-    position: absolute;
-    right: 0;
-}
-
-input[type="text"]:valid:focus,
-input[type="email"]:valid:focus,
-input[type="number"]:valid:focus,
-input[type="telephone"]:valid:focus {
+input[type="text"]:valid,
+input[type="email"]:valid,
+input[type="number"]:valid,
+input[type="telephone"]:valid {
     
     border: 2px solid #29af00;
-    
-    
 }
+
 
 input[type="text"]:invalid,
 input[type="email"]:invalid,
@@ -318,6 +309,28 @@ input[type="telephone"]:invalid{
 }
 
 
+
+
+// Buttos
+
+.form-buttons {
+    display: flex;
+    justify-content: space-around;
+    
+    .button {
+        background: $white;
+        border: 2px solid $red;
+        border-radius: 4px;
+        color: $red;
+        margin: 10px 0;
+        padding: 5px 10px;
+        
+        &:hover {
+            background: $red;
+            color: $white;
+        }
+    }
+}
 
 
 

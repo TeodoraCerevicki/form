@@ -116,12 +116,12 @@ table {
 
 .order-form {
   background: #fffdf2;
-  border-left: 8px solid #0097c1;
+  border-left: 12px solid #0097c1;
   border-radius: 0 10px 10px 0;
   -webkit-box-shadow: 10px 10px 5px rgba(173, 173, 173, 0.5);
   box-shadow: 10px 10px 5px rgba(173, 173, 173, 0.5);
   margin: 50px auto;
-  padding: 20px;
+  padding: 20px 40px;
   width: 60%; }
 
 input[type="radio"] {
@@ -204,22 +204,12 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="number"]:focus,
 input[type="telephone"]:focus {
-  background: #eee; }
+  background: #f2edda; }
 
-input[type="text"]::before,
-input[type="email"]::before,
-input[type="number"]::before,
-input[type="telephone"]::before {
-  content: "\f1b0";
-  color: #0c2449;
-  font-family: FontAwesome;
-  position: absolute;
-  right: 0; }
-
-input[type="text"]:valid:focus,
-input[type="email"]:valid:focus,
-input[type="number"]:valid:focus,
-input[type="telephone"]:valid:focus {
+input[type="text"]:valid,
+input[type="email"]:valid,
+input[type="number"]:valid,
+input[type="telephone"]:valid {
   border: 2px solid #29af00; }
 
 input[type="text"]:invalid,
@@ -227,3 +217,22 @@ input[type="email"]:invalid,
 input[type="number"]:invalid,
 input[type="telephone"]:invalid {
   border: 2px solid #e83a40; }
+
+.form-buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+  .form-buttons .button {
+    background: #fffdf2;
+    border: 2px solid #e83a40;
+    border-radius: 4px;
+    color: #e83a40;
+    margin: 10px 0;
+    padding: 5px 10px; }
+    .form-buttons .button:hover {
+      background: #e83a40;
+      color: #fffdf2; }
