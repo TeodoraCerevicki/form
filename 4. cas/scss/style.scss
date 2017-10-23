@@ -1,0 +1,325 @@
+// VARIABLES
+
+$red: #e83a40;
+$white: #fffdf2;
+$blue: #0c2449;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 80%;
+}
+
+// NAVIGATION MENu
+
+nav {
+    background: $red;
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    width: 100%;
+    padding: 20px;
+    
+    ul {
+        display: flex;
+        margin: 0;
+        
+       
+    }
+    
+    li {
+        list-style-type: none;
+        margin-left: 15px;
+        padding: 0 10px;
+    }
+    
+    a {
+        border-bottom: 2px solid $red;
+        color: $white;
+        font-weight: bold;
+        padding-bottom: 5px;
+        text-decoration: none;
+        
+        &:hover {
+            border-bottom: 2px solid $white;
+        }
+    }
+    
+    .logo a {
+        margin-top: 16px;
+        text-transform: lowercase;
+    }   
+}
+
+// T-shirt page
+
+h1, h2, p {
+        color: $blue;
+    }
+
+
+
+
+.desription {
+    margin: 80px auto;
+    
+    h1 {
+        margin-bottom: 70px;
+        text-transform: capitalize;
+    }
+    
+    img {
+        float: left;
+        height: 500px;
+        width: 500px;
+        margin: 0 20px 20px 0;
+    }
+    
+    p {
+        font-family: 'Open Sans', sans-serif;
+        line-height: 1.5;
+        padding-top: 12px;
+        text-align: justify; 
+    }
+    
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+}
+
+// Order button
+
+
+.order-button {
+    background: $red;
+    border-radius: 14px;
+    font-size: 30px;
+    margin: 18px auto;
+    padding-top: 23px;
+    text-align: center;
+    text-transform: uppercase;
+    height: 75px;
+    width: 234px;
+    
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+    
+    &:hover {
+        box-shadow: 4px 7px 5px rgba(175, 175, 175, 0.5);
+        transform: translateY(-5px);
+    }
+}
+
+
+
+// Table
+
+.table {
+    margin: 133px auto;
+    
+    h2 {
+        text-transform: capitalize;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 16px;
+    margin: 27px auto 126px;
+    text-transform: uppercase;
+    width: 80%;
+    
+    td, th {
+        border: 1px solid $red;
+        padding: 8px;
+        text-align: center;
+    }
+    
+    th {
+        background: $red;
+        color: $white;
+    }
+    
+    tr:nth-child(odd) {
+        background-color: rgba(247, 49, 56, 0.1);
+    }
+}
+
+
+
+
+/*=========================================
+            ORDER PAGE
+==========================================*/
+
+
+.order-page {
+    background: $red;
+}
+
+.order-form {
+    background: $white;
+    border-left: 8px solid #0097c1;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 10px 10px 5px rgba(173, 173, 173, 0.5);
+    margin: 50px auto;
+    padding: 20px;
+    width: 60%;
+}
+
+
+// Code to hide radio button
+input[type="radio"] {
+    opacity: 0;
+    width: 0;
+    margin: 0;
+}
+
+label[for="male"], 
+label[for="female"], 
+label[for="xs"], 
+label[for="s"], 
+label[for="m"], 
+label[for="l"], 
+label[for="xl"] {
+    
+    margin-bottom: 10px;
+    display: inline-block;
+    padding-left: 26px; // to move text and make space for new icon
+    position: relative; // so icon in ::before can be absolute
+    cursor: pointer;
+    
+}
+
+label[for="male"]::before, 
+label[for="female"]::before, 
+label[for="xs"]::before, 
+label[for="s"]::before, 
+label[for="m"]::before, 
+label[for="l"]::before, 
+label[for="xl"]::before {
+    
+    content: "\f10c";
+    color: $blue;
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+}
+
+
+
+// For when radio button is checked 
+input:checked + label[for="male"],
+input:checked + label[for="female"],
+input:checked + label[for="xs"], 
+input:checked + label[for="s"], 
+input:checked + label[for="m"], 
+input:checked + label[for="l"], 
+input:checked + label[for="xl"] {
+    
+    color: $red;
+    position: relative;
+}
+
+
+input:checked + label[for="male"]::before, 
+input:checked + label[for="female"]::before,
+input:checked + label[for="xs"]::before, 
+input:checked + label[for="s"]::before, 
+input:checked + label[for="m"]::before, 
+input:checked + label[for="l"]::before, 
+input:checked + label[for="xl"]::before {
+    
+    content: "\f1b0";
+    color: $blue;
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+}
+
+
+fieldset {
+    padding: 20px;
+    margin: 20px 0;
+    border: 3px solid #eee;
+}
+
+legend {
+    font-size: 20px;
+    color: $blue;
+    letter-spacing: 0.1em;
+    padding: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="telephone"]{
+    
+    border: 1px solid $blue;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0 55px 10px 0;
+    padding: 5px;
+    position: relative;
+    
+    
+}
+
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="telephone"]:focus {
+    
+    background: #eee;
+}
+
+input[type="text"]::before,
+input[type="email"]::before,
+input[type="number"]::before,
+input[type="telephone"]::before {
+    
+    content: "\f1b0";
+    color: $blue;
+    font-family: FontAwesome;
+    position: absolute;
+    right: 0;
+}
+
+input[type="text"]:valid:focus,
+input[type="email"]:valid:focus,
+input[type="number"]:valid:focus,
+input[type="telephone"]:valid:focus {
+    
+    border: 2px solid #29af00;
+    
+    
+}
+
+input[type="text"]:invalid,
+input[type="email"]:invalid,
+input[type="number"]:invalid,
+input[type="telephone"]:invalid{
+    
+    border: 2px solid $red;
+}
+
+
+
+
+
+
+
